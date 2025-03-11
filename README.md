@@ -1,6 +1,4 @@
-# Getting Started with Create React App with text expander componentd
-
-# availble prop that you can use for this reusable star rating component
+# availble prop that you can use for this reusable text expander component
 
 - children : defining the expanded text.
 
