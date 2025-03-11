@@ -2,15 +2,6 @@ import { useState } from "react";
 
 import PropTypes from "prop-types";
 
-TextExpander.prototype = {
-  isExpand: PropTypes.bool,
-  collapsedNumWords: PropTypes.number,
-  expandButtonText: PropTypes.string,
-  collapseButtonText: PropTypes.string,
-  buttonColor: PropTypes.string,
-  className: PropTypes.string,
-};
-
 export default function TextExpander({
   children,
   isExpand = false,
@@ -31,15 +22,25 @@ export default function TextExpander({
     fontSize: "inherit",
     cursor: "pointer",
   };
-  const expenderText = !expander
+  const expenderText = expander
     ? children
     : children.split(" ").slice(0, collapsedNumWords).join(" ") + "...";
   return (
     <div className={className}>
       {expenderText}
       <button style={buttonStyle} onClick={handleExpendText}>
-        {expander ? expandButtonText : collapseButtonText}
+        {expander ? collapseButtonText : expandButtonText}
       </button>
     </div>
   );
 }
+
+TextExpander.propTypes = {
+  children: PropTypes.string.isRequired,
+  isExpand: PropTypes.bool,
+  collapsedNumWords: PropTypes.number,
+  expandButtonText: PropTypes.string,
+  collapseButtonText: PropTypes.string,
+  buttonColor: PropTypes.string,
+  className: PropTypes.string,
+};

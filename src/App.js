@@ -3,7 +3,7 @@ import TextExpander from "./TextExpander";
 function App() {
   return (
     <div className='App'>
-      <TextExpander className={5}>
+      <TextExpander collapsedNumWords={50}>
         Space travel requires some seriously amazing technology and
         collaboration between countries, private companies, and international
         space organizations. And while it's not always easy (or cheap), the
