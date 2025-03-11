@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Getting Started with Create React App with text expander componentd
+
+# availble prop that you can use for this reusable star rating component
+
+- children : defining the expanded text.
+
+- isExpand : deifing the expand text sitution expanded or not.
+
+- collapsedNumWords : defining the number of expanded words from the text by default is 20 words.
+
+- expandButtonText : deifing the expand button text by default Show more.
+
+- collapseButtonText : deifing the collaps button text by default is Show less.
+
+- buttonColor : deifing the expander button text color.
+
+- className : deifing the star rating className by default is "".
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
